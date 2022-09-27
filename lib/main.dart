@@ -16,7 +16,8 @@ class MyApp extends StatelessWidget {
         '/sign-in': (context) => const SignInPage(),
         '/sign-up': (context) => const SignUpPage(),
         '/sign-up-set-profile': (context) => const SignUpSetProfilePage(),
-        '/sign-up-set-idcard': (context) => const SignUpSetIdCardPage()
+        '/sign-up-set-idcard': (context) => const SignUpSetIdCardPage(),
+        '/sign-up-success': (context) => const SignUpSuccessPage(),
       },
     );
   }
