@@ -2,8 +2,8 @@ import 'package:bank_sha_main/utils/theme.dart';
 import 'package:bank_sha_main/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
-class SignUpSetProfilePage extends StatelessWidget {
-  const SignUpSetProfilePage({Key? key}) : super(key: key);
+class SignUpSetIdCardPage extends StatelessWidget {
+  const SignUpSetIdCardPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class SignUpSetProfilePage extends StatelessWidget {
             ),
           ),
           Text(
-            'Join Us to Unlock\nYour Growth',
+            'Verify Your\nAccount',
             style: blackTextStyle.copyWith(
               fontSize: 20,
               fontWeight: semiBold,
@@ -66,33 +66,28 @@ class SignUpSetProfilePage extends StatelessWidget {
                   height: 16,
                 ),
                 Text(
-                  'Shayna Hanna',
+                  'Passport/ID Card',
                   style: blackTextStyle.copyWith(
                     fontSize: 18,
                     fontWeight: medium,
                   ),
                 ),
                 const SizedBox(
-                  height: 30,
-                ),
-                const CustomFormField(
-                  title: 'Set PIN (6 digit number)',
-                  obscureText: true,
-                ),
-                const SizedBox(
-                  height: 30,
+                  height: 50,
                 ),
                 CustomFilledButton(
                   title: 'Continue',
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/sign-up-set-idcard');
-                  },
+                  onPressed: () { },
                 ),
               ],
             ),
           ),
           const SizedBox(
-            height: 50,
+            height: 60,
+          ),
+          CustomTextButton(
+            title: 'Skip for Now',
+            onPressed: () {},
           ),
         ],
       ),
