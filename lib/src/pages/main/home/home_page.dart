@@ -1,6 +1,8 @@
-import 'package:bank_sha_main/src/pages/main/home/widgets/home_service_item.dart';
 import 'package:bank_sha_main/src/res/res.dart';
 import 'package:flutter/material.dart';
+
+part 'widgets/latest_transaction_item.dart';
+part 'widgets/service_item.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -8,7 +10,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: whiteColor,
+      backgroundColor: lightBackgroundColor,
       body: ListView(
         padding: const EdgeInsets.symmetric(
           horizontal: 24,
@@ -138,13 +140,13 @@ class HomePage extends StatelessWidget {
             'Balance',
             style: whiteTextStyle,
           ),
-          // Text(
-          //   formatCurrency(state.data.balance!),
-          //   style: whiteTextStyle.copyWith(
-          //     fontSize: 24,
-          //     fontWeight: semiBold,
-          //   ),
-          // ),
+          Text(
+            'Rp. 125.000.000',
+            style: whiteTextStyle.copyWith(
+              fontSize: 24,
+              fontWeight: semiBold,
+            ),
+          ),
         ],
       ),
     );
@@ -223,26 +225,26 @@ class HomePage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              HomeServiceItem(
+              ServiceItem(
                 iconUrl: 'assets/ic_topup.png',
                 title: 'Top Up',
                 onTap: () {
                   Navigator.pushNamed(context, '/topup');
                 },
               ),
-              HomeServiceItem(
+              ServiceItem(
                 iconUrl: 'assets/ic_send.png',
                 title: 'Send',
                 onTap: () {
                   Navigator.pushNamed(context, '/transfer');
                 },
               ),
-              HomeServiceItem(
+              ServiceItem(
                 iconUrl: 'assets/ic_withdraw.png',
                 title: 'Withdraw',
                 onTap: () {},
               ),
-              HomeServiceItem(
+              ServiceItem(
                 iconUrl: 'assets/ic_more.png',
                 title: 'More',
                 onTap: () {
@@ -284,7 +286,38 @@ class HomePage extends StatelessWidget {
               color: whiteColor,
             ),
             child: Column(
-
+              children: const [
+                LatestTransactionItem(
+                  iconUrl: 'assets/ic_transaction_cat1.png',
+                  title: 'Top Up',
+                  time: 'Yesterday',
+                  value: '+ 450.000',
+                ),
+                LatestTransactionItem(
+                  iconUrl: 'assets/ic_transaction_cat2.png',
+                  title: 'Cashback',
+                  time: 'Sept 11',
+                  value: '+ 22.000',
+                ),
+                LatestTransactionItem(
+                  iconUrl: 'assets/ic_transaction_cat3.png',
+                  title: 'Withdraw',
+                  time: 'Sep 2',
+                  value: '- 5.000',
+                ),
+                LatestTransactionItem(
+                  iconUrl: 'assets/ic_transaction_cat4.png',
+                  title: 'Transfer',
+                  time: 'Aug 27',
+                  value: '+ 123.500',
+                ),
+                LatestTransactionItem(
+                  iconUrl: 'assets/ic_transaction_cat5.png',
+                  title: 'Electric',
+                  time: 'Feb 28',
+                  value: '+ 12.350.000',
+                ),
+              ],
             ),
           ),
         ],
@@ -385,34 +418,34 @@ class MoreDialog extends StatelessWidget {
               spacing: 29,
               runSpacing: 25,
               children: [
-                HomeServiceItem(
+                ServiceItem(
                   iconUrl: 'assets/ic_product_data.png',
                   title: 'Data',
                   onTap: () {
                     Navigator.pushNamed(context, '/data-provider');
                   },
                 ),
-                HomeServiceItem(
+                ServiceItem(
                   iconUrl: 'assets/ic_product_water.png',
                   title: 'Water',
                   onTap: () {},
                 ),
-                HomeServiceItem(
+                ServiceItem(
                   iconUrl: 'assets/ic_product_stream.png',
                   title: 'Stream',
                   onTap: () {},
                 ),
-                HomeServiceItem(
+                ServiceItem(
                   iconUrl: 'assets/ic_product_movie.png',
                   title: 'Movie',
                   onTap: () {},
                 ),
-                HomeServiceItem(
+                ServiceItem(
                   iconUrl: 'assets/ic_product_food.png',
                   title: 'Food',
                   onTap: () {},
                 ),
-                HomeServiceItem(
+                ServiceItem(
                   iconUrl: 'assets/ic_product_travel.png',
                   title: 'Travel',
                   onTap: () {},
