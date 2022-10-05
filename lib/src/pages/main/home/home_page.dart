@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 part 'widgets/latest_transaction_item.dart';
 part 'widgets/service_item.dart';
+part 'widgets/user_item.dart';
+part 'widgets/tips_item.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -346,6 +348,28 @@ class HomePage extends StatelessWidget {
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
+                children: const [
+                  UserItem(
+                      imgUrl: 'assets/img_profile.png',
+                      name: 'Nita'
+                  ),
+                  UserItem(
+                      imgUrl: 'assets/img_profile.png',
+                      name: 'Nita'
+                  ),
+                  UserItem(
+                      imgUrl: 'assets/img_profile.png',
+                      name: 'Nita'
+                  ),
+                  UserItem(
+                      imgUrl: 'assets/img_profile.png',
+                      name: 'Nita'
+                  ),
+                  UserItem(
+                      imgUrl: 'assets/img_profile.png',
+                      name: 'Nita'
+                  ),
+                ],
               ),
             ),
           ],
@@ -375,6 +399,32 @@ class HomePage extends StatelessWidget {
           Wrap(
             spacing: 17,
             runSpacing: 18,
+            children: const [
+              TipsItem(
+                  imgUrl: 'assets/img_tips1.png',
+                  name: 'blaa blaa blaaa'
+              ),
+              TipsItem(
+                  imgUrl: 'assets/img_tips1.png',
+                  name: 'blaa blaa blaaa'
+              ),
+              TipsItem(
+                  imgUrl: 'assets/img_tips1.png',
+                  name: 'blaa blaa blaaa'
+              ),
+              TipsItem(
+                  imgUrl: 'assets/img_tips1.png',
+                  name: 'blaa blaa blaaa'
+              ),
+              TipsItem(
+                  imgUrl: 'assets/img_tips1.png',
+                  name: 'blaa blaa blaaa'
+              ),
+              TipsItem(
+                  imgUrl: 'assets/img_tips1.png',
+                  name: 'blaa blaa blaaa'
+              ),
+            ],
           ),
 
         ],
