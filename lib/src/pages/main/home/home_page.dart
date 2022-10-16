@@ -61,36 +61,41 @@ class HomePage extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.pushNamed(context, '/profile');
+              Navigator.of(
+                context,
+                rootNavigator: true,
+              ).pushNamed("/profile");
             },
             child: Container(
-                width: 60,
-                height: 60,
-                decoration: const BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                      image: AssetImage(
-                        'assets/img_profile.png',
-                      )),
+              width: 60,
+              height: 60,
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: AssetImage(
+                    'assets/img_profile.png',
+                  ),
                 ),
-                child: Align(
-                  alignment: Alignment.topRight,
-                  child: Container(
-                    width: 16,
-                    height: 16,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: whiteColor,
-                    ),
-                    child: Center(
-                      child: Icon(
-                        Icons.check_circle,
-                        color: greenColor,
-                        size: 14,
-                      ),
+              ),
+              child: Align(
+                alignment: Alignment.topRight,
+                child: Container(
+                  width: 16,
+                  height: 16,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: whiteColor,
+                  ),
+                  child: Center(
+                    child: Icon(
+                      Icons.check_circle,
+                      color: greenColor,
+                      size: 14,
                     ),
                   ),
-                )),
+                ),
+              ),
+            ),
           ),
         ],
       ),
@@ -238,7 +243,7 @@ class HomePage extends StatelessWidget {
                 iconUrl: 'assets/ic_send.png',
                 title: 'Send',
                 onTap: () {
-                  Navigator.pushNamed(context, '/transfer');
+                  // Navigator.pushNamed(context, '/transfer');
                 },
               ),
               ServiceItem(
@@ -349,32 +354,16 @@ class HomePage extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: const [
-                  UserItem(
-                      imgUrl: 'assets/img_profile.png',
-                      name: 'Nita'
-                  ),
-                  UserItem(
-                      imgUrl: 'assets/img_profile.png',
-                      name: 'Nita'
-                  ),
-                  UserItem(
-                      imgUrl: 'assets/img_profile.png',
-                      name: 'Nita'
-                  ),
-                  UserItem(
-                      imgUrl: 'assets/img_profile.png',
-                      name: 'Nita'
-                  ),
-                  UserItem(
-                      imgUrl: 'assets/img_profile.png',
-                      name: 'Nita'
-                  ),
+                  UserItem(imgUrl: 'assets/img_profile.png', name: 'Nita'),
+                  UserItem(imgUrl: 'assets/img_profile.png', name: 'Nita'),
+                  UserItem(imgUrl: 'assets/img_profile.png', name: 'Nita'),
+                  UserItem(imgUrl: 'assets/img_profile.png', name: 'Nita'),
+                  UserItem(imgUrl: 'assets/img_profile.png', name: 'Nita'),
                 ],
               ),
             ),
           ],
-        )
-    );
+        ));
   }
 
   Widget buildFriendlyTips() {
@@ -400,38 +389,18 @@ class HomePage extends StatelessWidget {
             spacing: 17,
             runSpacing: 18,
             children: const [
-              TipsItem(
-                  imgUrl: 'assets/img_tips1.png',
-                  name: 'blaa blaa blaaa'
-              ),
-              TipsItem(
-                  imgUrl: 'assets/img_tips1.png',
-                  name: 'blaa blaa blaaa'
-              ),
-              TipsItem(
-                  imgUrl: 'assets/img_tips1.png',
-                  name: 'blaa blaa blaaa'
-              ),
-              TipsItem(
-                  imgUrl: 'assets/img_tips1.png',
-                  name: 'blaa blaa blaaa'
-              ),
-              TipsItem(
-                  imgUrl: 'assets/img_tips1.png',
-                  name: 'blaa blaa blaaa'
-              ),
-              TipsItem(
-                  imgUrl: 'assets/img_tips1.png',
-                  name: 'blaa blaa blaaa'
-              ),
+              TipsItem(imgUrl: 'assets/img_tips1.png', name: 'blaa blaa blaaa'),
+              TipsItem(imgUrl: 'assets/img_tips1.png', name: 'blaa blaa blaaa'),
+              TipsItem(imgUrl: 'assets/img_tips1.png', name: 'blaa blaa blaaa'),
+              TipsItem(imgUrl: 'assets/img_tips1.png', name: 'blaa blaa blaaa'),
+              TipsItem(imgUrl: 'assets/img_tips1.png', name: 'blaa blaa blaaa'),
+              TipsItem(imgUrl: 'assets/img_tips1.png', name: 'blaa blaa blaaa'),
             ],
           ),
-
         ],
       ),
     );
   }
-
 }
 
 class MoreDialog extends StatelessWidget {
@@ -508,4 +477,3 @@ class MoreDialog extends StatelessWidget {
     );
   }
 }
-
