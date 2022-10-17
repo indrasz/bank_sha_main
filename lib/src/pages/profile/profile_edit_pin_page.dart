@@ -1,14 +1,14 @@
 part of '../pages.dart';
 
-class ProfileEditPage extends StatelessWidget {
-  const ProfileEditPage({Key? key}) : super(key: key);
+class ProfileEditPinPage extends StatelessWidget {
+  const ProfileEditPinPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Edit Profile',
+          'Edit PIN',
         ),
       ),
       body: ListView(
@@ -29,43 +29,22 @@ class ProfileEditPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const CustomFormField(
-                  title: 'Username',
-                  // controller: usernameController,
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
-                const CustomFormField(
-                  title: 'Full Name',
-                  // controller: nameController,
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
-                const CustomFormField(
-                  title: 'Email Address',
-                  // controller: emailController,
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
-                const CustomFormField(
-                  title: 'Password',
+                  title: 'Old PIN',
                   obscureText: true,
-                  // controller: passwordController,
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                const CustomFormField(
+                  title: 'New PIN',
+                  obscureText: true,
                 ),
                 const SizedBox(
                   height: 30,
                 ),
                 CustomFilledButton(
                   title: 'Update Now',
-                  onPressed: () {
-                    Navigator.pushNamedAndRemoveUntil(
-                      context,
-                      '/profile-edit-success',
-                          (route) => false,
-                    );
-                  },
+                  onPressed: () {},
                 ),
               ],
             ),

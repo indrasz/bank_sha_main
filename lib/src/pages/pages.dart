@@ -21,5 +21,7 @@ part 'signup/sign_up_success_page.dart';
 part 'signin/signin_page.dart';
 part 'profile/profile_page.dart';
 part 'profile/profile_edit_page.dart';
+part 'profile/profile_edit_pin_page.dart';
+part 'profile/profile_edit_success_page.dart';
 part 'pin/pin_page.dart';
 part 'main/main_page.dart';
