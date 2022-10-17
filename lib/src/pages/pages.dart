@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:bank_sha_main/src/res/res.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:bank_sha_main/src/components/components.dart';
 import 'package:bank_sha_main/src/extensions/extensions.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -26,4 +27,5 @@ part 'profile/profile_edit_pin_page.dart';
 part 'profile/profile_edit_success_page.dart';
 part 'pin/pin_page.dart';
 part 'topup/topup_page.dart';
+part 'topup/topup_amount_page.dart';
 part 'main/main_page.dart';

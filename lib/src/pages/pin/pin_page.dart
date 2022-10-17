@@ -1,14 +1,13 @@
 part of '../pages.dart';
 
-
 class PinPage extends StatefulWidget {
   const PinPage({Key? key}) : super(key: key);
 
   @override
-  State<PinPage> createState() => _PinPageState();
+  State<PinPage> createState() => _PinPage();
 }
 
-class _PinPageState extends State<PinPage> {
+class _PinPage extends State<PinPage> {
 
   final TextEditingController _pinController = TextEditingController(text: '');
   String pin = '';
