@@ -235,7 +235,10 @@ class HomePage extends StatelessWidget {
                 iconUrl: 'assets/ic_topup.png',
                 title: 'Top Up',
                 onTap: () {
-                  Navigator.pushNamed(context, '/topup');
+                  Navigator.of(
+                    context,
+                    rootNavigator: true,
+                  ).pushNamed("/top-up");
                 },
               ),
               ServiceItem(
